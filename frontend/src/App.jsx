@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from "react";
 import "./styles.css";
+import "./theme.css";
 
 const seedCases = [
   { id:"RF-2048", order:"ORD-78241", customer:"Aarav Mehta", email:"aarav.m@example.com", amount:2499, issue:"Address not serviceable", payment:"Paid", orderState:"Not created", path:"Voice-assisted", status:"Needs customer", age:"2m", owner:"RescueFlow AI", priority:"High", address:"14, Green Park Extension, New Delhi", event:"payment.succeeded", created:"Today, 10:42 AM", note:"Payment captured successfully, but order creation was blocked by address validation." },
