@@ -12,6 +12,10 @@ class Settings(BaseSettings):
     DB_NAME: str = "rescueflow_db"
     DB_USER: str = "rescueflow_app"
     DB_PASSWORD: str
+    RAZORPAY_KEY_ID: str = ""
+    RAZORPAY_KEY_SECRET: str = ""
+    RAZORPAY_MODE: str = "test"
+    DEMO_SHIPMENT_FAILURE: bool = True
 
     model_config = SettingsConfigDict(
         env_file=".env",
