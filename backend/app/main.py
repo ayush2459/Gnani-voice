@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from app.core.config import settings
 from app.core.database import get_db
 from app.api.v1.cases import router as cases_router
+from app.api.v1.commerce import router as commerce_router
 
 
 app = FastAPI(
@@ -16,6 +17,7 @@ app = FastAPI(
 
 # Register API routers AFTER creating the FastAPI application
 app.include_router(cases_router, prefix="/api/v1")
+app.include_router(commerce_router, prefix="/api/v1")
 
 
 @app.get("/")
