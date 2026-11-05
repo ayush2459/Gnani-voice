@@ -83,7 +83,7 @@ def upgrade():
     for pid, name, description, price, image in products:
         if "역" in image:
             image = "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
-        op.execute(sa.text("""
+        op.get_bind().execute(sa.text("""
             INSERT INTO commerce_products(id,name,description,price_paise,image_url)
             VALUES (:id,:name,:description,:price,:image)
         """), {"id":pid,"name":name,"description":description,"price":price,"image":image})
