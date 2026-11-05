@@ -61,6 +61,7 @@ def create_checkout(payload: CheckoutIn, db: Session = Depends(get_db)):
         if catalog[pid]["stock_quantity"] < qty:
             raise HTTPException(409, f"Insufficient stock for {catalog[pid]['name']}.")
     total = sum(catalog[pid]["price_paise"] * qty for pid, qty in quantities.items())
+    db.rollback()  # End the catalog read transaction before the provider request.
     order_id = uuid.uuid4()
     try:
         remote = client.order.create(data={
