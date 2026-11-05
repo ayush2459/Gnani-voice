@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import "./styles.css";
 import "./theme.css";
 
-const API_BASE = (import.meta.env.VITE_API_BASE_URL || "/api/v1").replace(/\\/$/, "");
+const API_BASE = (import.meta.env.VITE_API_BASE_URL || "/api/v1").replace(/\/$/, "");
 async function apiRequest(path, options = {}) {
  const response = await fetch(`${API_BASE}${path}`, {
   ...options,
