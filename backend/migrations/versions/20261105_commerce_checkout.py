@@ -74,7 +74,7 @@ def upgrade():
         sa.Column("created_at", sa.DateTime(timezone=True), server_default=sa.func.now(), nullable=False),
     )
     products = [
-        ("aurora-headphones","Aurora Wireless Headphones","Immersive audio with adaptive noise cancellation.",699900,"https://images.unsplash.com/photo-150575역"),
+        ("aurora-headphones","Aurora Wireless Headphones","Immersive audio with adaptive noise cancellation.",699900,"https://images.unsplash.com/photo-1505740420928-5e560c06d30e"),
         ("pulse-smartwatch","Pulse Smartwatch","Fitness, notifications and everyday health insights.",499900,"https://images.unsplash.com/photo-1523275335684-37898b6baf30"),
         ("nova-speaker","Nova Bluetooth Speaker","Portable sound with a rich, balanced profile.",299900,"https://images.unsplash.com/photo-1608043152269-423dbba4e7e1"),
         ("arc-keyboard","Arc Mechanical Keyboard","Compact mechanical keyboard for focused work.",649900,"https://images.unsplash.com/photo-1587829741301-dc798b83add3"),
