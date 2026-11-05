@@ -12,3 +12,13 @@
 .demo-order-preview>div>span{font-size:11px;color:#9eb5a0;font-weight:700}
 .demo-order-preview b{display:block;font-size:12px}
 .demo-order-preview small{display:block;margin-top:3px;color:#98a39b;font-size:10px}
+
+.intake-modal{width:min(680px,calc(100vw - 32px));max-height:88vh;overflow-y:auto}
+.intake-detail{margin:12px 0;padding:12px;border:1px solid rgba(255,255,255,.12);border-radius:10px}
+.intake-detail summary{cursor:pointer;font-size:12px;font-weight:700;color:#cbd8cb}
+.intake-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:14px}
+.intake-grid label{display:grid;gap:6px;font-size:10px;color:#aab6ab}
+.intake-grid input,.intake-grid select,.intake-grid textarea{width:100%;min-width:0;border:1px solid rgba(255,255,255,.14);border-radius:8px;background:#151d1a;color:#edf3ed;padding:9px;font:inherit;font-size:12px}
+.intake-wide{grid-column:1/-1}
+.intake-hint{font-size:10px;color:#9eaaa0;margin:10px 0}
+@media(max-width:600px){.intake-grid{grid-template-columns:1fr}.intake-wide{grid-column:auto}}
